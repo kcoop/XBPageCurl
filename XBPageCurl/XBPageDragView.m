@@ -31,6 +31,7 @@
     self.viewToCurl = nil;
     self.pageCurlView = nil;
     self.bottomSnappingPoint = nil;
+    self.curledSnappingPoint = nil;
     [super dealloc];
 }
 
