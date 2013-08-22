@@ -753,7 +753,7 @@ void OrthoM4x4(GLfloat *out, GLfloat left, GLfloat right, GLfloat bottom, GLfloa
     size_t bitsPerComponent = 8;
     size_t bytesPerRow = textureWidth * 4;
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    CGContextRef context = CGBitmapContextCreate(NULL, textureWidth, textureHeight, bitsPerComponent, bytesPerRow, colorSpace, kCGImageAlphaPremultipliedLast);
+    CGContextRef context = CGBitmapContextCreate(NULL, textureWidth, textureHeight, bitsPerComponent, bytesPerRow, colorSpace, (CGBitmapInfo)kCGImageAlphaPremultipliedLast);
     CGColorSpaceRelease(colorSpace);
     
     CGRect r = CGRectMake(0, 0, width, height);
@@ -946,7 +946,7 @@ void OrthoM4x4(GLfloat *out, GLfloat left, GLfloat right, GLfloat bottom, GLfloa
     size_t bitsPerComponent = 8;
     size_t bytesPerRow = width * 4;
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    CGContextRef context = CGBitmapContextCreate(NULL, width, height, bitsPerComponent, bytesPerRow, colorSpace, kCGImageAlphaPremultipliedLast);
+    CGContextRef context = CGBitmapContextCreate(NULL, width, height, bitsPerComponent, bytesPerRow, colorSpace, (CGBitmapInfo)kCGImageAlphaPremultipliedLast);
     CGColorSpaceRelease(colorSpace);
     CGRect r = CGRectMake(0, 0, width, height);
     CGContextClearRect(context, r);
